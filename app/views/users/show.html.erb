@@ -1,0 +1,36 @@
+<h1>User by id</h1>
+
+<strong>Welcome aboard</strong> <em><%=@user.firstname%> <%=@user.lastname%></em>
+
+<p>
+  <strong>First Name:</strong>
+  <%= @user.firstname %>
+</p>
+ 
+<p>
+  <strong>Last Name:</strong>
+  <%= @user.lastname %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @user.age %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @user.birthday %>
+</p>
+
+<p>
+  <strong>id:</strong>
+  <%= @user.id %>
+</p>
+
+    <%= link_to "Edit User", edit_user_path(@user) %> 
+    <%= link_to "Destroy User", user_path(@user), method: :delete %>

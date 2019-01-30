@@ -1,0 +1,20 @@
+<h1 class="head">List of all users</h1>
+
+<center>
+<button class="button" type="button">Click me to change colors!</button>
+</center>
+
+<ul class="list">
+<%@users.each do |user|%>
+    <li class="users">
+    <%=user.firstname%> <%=user.lastname%>
+    <%= link_to "Edit User", edit_user_path(user) %> 
+    <%= link_to "Destroy User", user_path(user), method: :delete %>
+    <%= link_to "New Post", new_post_path(Post)%>
+    </li>
+<%end%>
+</ul>
+
+<center>
+<%=image_tag('appl.png', id: 'image')%>
+</center>

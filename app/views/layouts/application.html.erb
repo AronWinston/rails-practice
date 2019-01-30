@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rumblr</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', :defer => "defer" %>
+  </head>
+
+  <body>
+    <nav>
+      <a href="/users">Users</a>
+      <a href="/users/1">Aron</a>
+      <a href="/users/new">New User</a>
+      <a href="/posts">Posts</a>
+      <a href="/posts/new">New Post</a>
+    </nav>
+
+    <%= yield %>
+
+  </body>
+</html>

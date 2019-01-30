@@ -1,0 +1,24 @@
+<h1>New Posts</h1>
+
+
+<%= form_with model: @post do |form|%>
+
+<p>
+<%= form.label :title%><br>
+<%= form.text_field :title%>
+</p>
+
+<p>
+<%= form.label :content%><br>
+<%= form.text_field :content%>
+</p>
+
+<%=form.hidden_field :user_id, value: @user_id%>
+<%= form.select :user_id, @users.map {|user| [user.firstname,user.id]}%>
+
+<p>
+<%=form.submit%>
+</p>
+
+<%end%>
+
